@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <button>Math</button>    <input type="number" class="number"  id="mat"><br /><br />
+        <button>English</button> <input type="number" class="number"  id="eng"/><br /><br />
+        <button>Urdu</button>    <input type="number" class="number"  id="urd"/><br /><br />
+        <button>Science</button> <input type="number" class="number"  id="sci"/><br /><br />
+        
+        <button onclick="total()" >Total</button>
+        
+        <span  id="marks" >Your Marks</span>
+        <span id="minus" >minus</span>
+        <span  id="per">Percentage</span>
+        <span  id="grade">Grade</span>
+    
+        </div>
+<!-- <button onmouseover="java()"><img src="plus-flat.png" alt=""></button>
+<span id="number"></span> 
+<button onmouseover="javas()"><img src="Minus_Circle_Green.webp" alt=""></button> -->
+    <script>
+//         var number=0
+// function java(){
+//     document.getElementById("number").innerHTML=number++
+// }
+// function javas(){
+// document.getElementById("number").innerHTML=number--
+// }
+
+function total() {
+    var math= document.getElementById('mat').value
+    var english= document.getElementById('eng').value
+    var urdu= document.getElementById('urd').value
+    var science= document.getElementById('sci').value
+    var marks= + math + + english + + urdu + + science 
+    var minus = 400 - marks
+    var per = marks /400 *100
+ 
+ 
+    if (per = 80 <=100){
+    document.getElementById('grade').innerHTML=per
+
+    }
+    document.getElementById('marks').innerHTML=marks
+    document.getElementById('minus').innerHTML=minus
+    document.getElementById('per').innerHTML=per
+  
+
+
+}
+    </script>
+</body>
+</html>
